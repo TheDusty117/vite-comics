@@ -1,13 +1,20 @@
-<script setup>
+<script>
 // import HelloWorld from './components/HelloWorld.vue'
 //1. importo il componente
 import AppHeader from './components/AppHeader.vue'
+import AppMain from './components/AppMain.vue'
+import AppBluebar from './components/AppBluebar.vue'
+import AppFooter from './components/AppFooter.vue'
+
 
 export default {
 
   components: {
     // 2. registro il componente importato prima
-    AppHeader
+    AppHeader,
+    AppMain,
+    AppBluebar,
+    AppFooter
 
   },
   
@@ -19,6 +26,13 @@ export default {
 
   <!--3. utilizzo il componente -->
   <AppHeader/>
+
+  <AppMain/>
+
+  <AppBluebar/>
+
+  <AppFooter/>
+
 
 </template>
 

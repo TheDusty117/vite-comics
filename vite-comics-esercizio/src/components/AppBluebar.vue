@@ -8,6 +8,9 @@ export default {
 
 
 <template>
+  <section>
+    
+  </section>
   <div class="container">
     <div class="bluebar">
       <ul>
@@ -26,5 +29,6 @@ export default {
   .bluebar{
     background-color: blue;
     min-height: 100px;
+    width: 100%;
   }
 </style>

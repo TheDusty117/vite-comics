@@ -8,15 +8,14 @@ export default {
 
 
 <template>
-  <div class="main">
-    ciao main
-  </div>
+  <main>
+    <div class="container">
+      <h1>il contenuto va qui</h1>
+    </div>
+  </main>
 </template>
 
 
-<style>
-  .main{
-    background-color: green;
-    min-height: 100px;
-  }
+<style lang="scss" scoped>
+
 </style>

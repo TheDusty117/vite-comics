@@ -36,6 +36,10 @@ export default {
 
 </template>
 
-<style scoped>
+<style lang="scss">
+/* stili comuni su tutto il sito web */
+
+//includo il file general
+@use './style/general.scss';
 
 </style>

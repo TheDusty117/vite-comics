@@ -8,15 +8,23 @@ export default {
 
 
 <template>
-  <div class="bluebar">
-    ciao bluebar
+  <div class="container">
+    <div class="bluebar">
+      <ul>
+        <li>digital comics</li>
+        <li>dc merchandise</li>
+        <li>subscription</li>
+        <li>comic shop locator</li>
+        <li>dc power visa</li>
+      </ul>
+    </div>
   </div>
 </template>
 
 
-<style>
+<style lang="scss" scoped>
   .bluebar{
-    background-color: cornflowerblue;
+    background-color: blue;
     min-height: 100px;
   }
 </style>

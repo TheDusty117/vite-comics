@@ -57,6 +57,10 @@
     font-weight: 700;
   }
 
+  .menu-item:hover{
+    color: #0282F9;
+  }
+
   .active{
     color: #0282F9;
   }

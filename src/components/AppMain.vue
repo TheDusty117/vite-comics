@@ -111,7 +111,9 @@ export default {
             </div>
             <h3 class="card-title">{{ comic.series }}</h3>
           </li> -->
-          <Card :thumb="comics[0].thumb" :series="comics[0].series"  />
+
+          <!-- 3... stampare e ciclare il componente CArd------------------------------>
+          <Card v-for="(comic,i) in comics" :key="i" :thumb="comic.thumb" :series="comic.series"  />
         </ul>
 
       </div>

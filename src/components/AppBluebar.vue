@@ -1,7 +1,43 @@
 <script>
+
+
+import BluebarCard from './BluebarCard.vue';
+
 export default {
+
+
+  components: {
+    BluebarCard,
+  },
+
+
   data(){
-    
+    return{
+
+      barObjects: [
+        {
+          img: '/images/buy-comics-digital-comics.png',
+          description: 'digital comics'
+        },
+        {
+          img: '/images/buy-comics-merchandise.png',
+          description: 'dc merchandise'
+        },
+        {
+          img: '/images/buy-comics-subscriptions.png',
+          description: 'subscription'
+        },
+        {
+          img: '/images/buy-comics-shop-locator.png',
+          description: 'comic shop locator'
+        },
+        {
+          img: '/images/buy-dc-power-visa.svg',
+          description: 'dc power visa'
+        },
+      ]
+
+    }
   }
 }
 </script>
@@ -12,36 +48,16 @@ export default {
     <div class="container container-blue">
       <div class="bluebar">
         <ul class="row row-bluebar">
-          <li class="bluebar-item">
-            <img src="/images/buy-comics-digital-comics.png" alt="">
+          
+          <!-- <li v-for="(barObject,i) in barObjects" :key="i" class="bluebar-item">
+            <img class="bluebar-logo" :src="barObject.img" alt="">
             <span>
-              digital comics
+              {{ barObject.description }}
             </span>
-          </li>
-          <li class="bluebar-item">
-            <img src="/images/buy-comics-merchandise.png" alt="">
-            <span>
-              dc merchandise
-            </span>
-          </li>
-          <li class="bluebar-item">
-            <img src="/images/buy-comics-subscriptions.png" alt="">
-            <span>
-              subscription
-            </span>
-          </li>
-          <li class="bluebar-item">
-            <img id="position-logo" src="/images/buy-comics-shop-locator.png" alt="">
-            <span>
-              comic shop locator
-            </span>
-          </li>
-          <li class="bluebar-item">
-            <img src="/images/buy-dc-power-visa.svg" alt="">
-            <span>
-              dc power visa
-            </span>
-          </li>
+          </li> -->
+
+          <BluebarCard v-for="(obj,i) in barObjects" :key="i" :img="obj.img" :description="obj.description"   />
+          
         </ul>
       </div>
     </div>
@@ -65,6 +81,7 @@ ul{
   #position-logo{
     width: 35px;
   }
+  
 
   span{
     font-size: 15px;

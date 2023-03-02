@@ -30,6 +30,7 @@
 
   .comic-image{
     object-fit: cover;
+    object-position: top;
     width: 200px;
     height: 200px;
   }

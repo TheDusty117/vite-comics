@@ -101,7 +101,7 @@ export default {
     </section>
 
     <!--CONTENT SECTION-->
-    <section>
+    <section class="grid-sect">
       <div class="container">
 
         <ul class="grid">
@@ -129,6 +129,10 @@ export default {
     min-height: 140px;
   }
   
+  .grid-sect{
+    padding: 40px 0px;
+  }
+
   .grid{
     display: grid;
     grid-template-columns: repeat(6,1fr);

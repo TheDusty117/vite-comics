@@ -1,6 +1,56 @@
 <script>
   export default {
+    data(){
+      return{
+        
+        menuItems: [
 
+          {
+            itemClass: 'menu-item',
+            itemSpec: 'character',
+          },
+          {
+            itemClass: 'menu-item',
+            itemSpec: 'comics',
+          },
+          {
+            itemClass: 'menu-item',
+            itemSpec: 'movies',
+          },
+          {
+            itemClass: 'menu-item',
+            itemSpec: 'tv',
+          },
+          {
+            itemClass: 'menu-item',
+            itemSpec: 'games',
+          },
+          {
+            itemClass: 'menu-item',
+            itemSpec: 'collectibles',
+          },
+          {
+            itemClass: 'menu-item',
+            itemSpec: 'videos',
+          },
+          {
+            itemClass: 'menu-item',
+            itemSpec: 'fans',
+          },
+          {
+            itemClass: 'menu-item',
+            itemSpec: 'news',
+          },
+          {
+            itemClass: 'menu-item',
+            itemSpec: 'shop',
+          },
+
+        ]
+
+
+      }
+    }
   }
 </script>
 
@@ -15,16 +65,7 @@
           <img src="/images/dc-logo.png" alt="">
 
           <ul class="menu">
-            <li class="menu-item">character</li>
-            <li class="menu-item active">comics</li>
-            <li class="menu-item">movies</li>
-            <li class="menu-item">tv</li>
-            <li class="menu-item">games</li>
-            <li class="menu-item">collectibles</li>
-            <li class="menu-item">videos</li>
-            <li class="menu-item">fans</li>
-            <li class="menu-item">news</li>
-            <li class="menu-item">shop</li>
+            <li v-for="(el,i) in menuItems" class="menu-item">{{ menuItems[i].itemSpec }}</li>
           </ul>
 
         </div>

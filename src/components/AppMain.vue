@@ -1,5 +1,15 @@
 <script>
+
+// 1... importare il componente Card
+import Card from './Card.vue'
+
 export default {
+
+  // 2.. registrare componente
+  components: {
+    Card
+  },
+
   data() {
     return {
       comics: [
@@ -95,12 +105,13 @@ export default {
       <div class="container">
 
         <ul class="grid">
-          <li v-for="(comic,i) in comics" :key="i" class="card">
+          <!-- <li v-for="(comic,i) in comics" :key="i" class="card">
             <div class="comic-image">
               <img class="comic-image" :src="comic.thumb" alt="">
             </div>
             <h3 class="card-title">{{ comic.series }}</h3>
-          </li>
+          </li> -->
+          <Card :thumb="comics[0].thumb" :series="comics[0].series"  />
         </ul>
 
       </div>

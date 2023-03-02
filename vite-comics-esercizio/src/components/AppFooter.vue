@@ -1,7 +1,52 @@
 <script>
+
 export default {
   data(){
-    
+    return {
+
+      menu1:{
+        title: 'dc comics',
+        links: [
+          'Characters',
+          'Comics',
+          'Movies',
+          'TV',
+          'Games',
+          'Videos',
+          'News',
+        ]
+      },
+
+      menu2:{
+        title: 'dc',
+        links: [
+          'Termis Of Use',
+          'Privacy policy(New)',
+          'Ad Choices',
+          'Advertising',
+          'Jobs',
+          'Subscriptions',
+          'Talent Workshops',
+          'CPSC Certificates',
+          'Ratings',
+          'Shop Help',
+          'Contact Us',
+
+        ]
+      },
+
+      menu3:{
+        title: 'sites',
+        links: [
+          'DC',
+          'MAD Magazine',
+          'DC Kids',
+          'DC Universe',
+          'DC Power Visa',
+        ]
+      },
+
+    }
   }
 }
 </script>
@@ -17,96 +62,35 @@ export default {
         <div class="row row-infos">
 
           <div class="row row-links">
-            <ul class="infos-list">
-              <h2>dc comics</h2>
-              <li class="infos-item">
-                <a href="">Characters</a>
-              </li>
-              <li class="infos-item">
-                <a href="">Comics</a>
-              </li>
-              <li class="infos-item">
-                <a href="">Movies</a>
-              </li>
-              <li class="infos-item">
-                <a href="">TV</a>
-              </li>
-              <li class="infos-item">
-                <a href="">Games</a>
-              </li>
-              <li class="infos-item">
-                <a href="">Videos</a>
-              </li>
-              <li class="infos-item">
-                <a href="">News</a>
-              </li>
 
-              <h2>
-                Shop
-              </h2>
-              <li class="infos-item">
-                <a href="">Shop DC</a>
-              </li>
-              <li class="infos-item">
-                <a href="">Shop DC Collectibles</a>
+            <!--menu 1-->
+            <ul class="infos-list">
+
+              <h2>{{ menu1.title }}</h2>
+              <li v-for="link in menu1.links" key="i" class="infos-item">
+                <a href="">{{ link }}</a>
               </li>
               
             </ul>
 
+            <!--menu 2-->
             <ul class="infos-list">
-              <h2>dc</h2>
-              <li class="infos-item">
-                <a href="">Terms Of Use</a>
+
+              <h2>{{ menu2.title }}</h2>
+              <li v-for="link in menu2.links" key="i" class="infos-item">
+                <a href="">{{ link }}</a>
               </li>
-              <li class="infos-item">
-                <a href="">Privacy policy(New)</a>
-              </li>
-              <li class="infos-item">
-                <a href="">Ad Choices</a>
-              </li>
-              <li class="infos-item">
-                <a href="">Advertising</a>
-              </li>
-              <li class="infos-item">
-                <a href="">Jobs</a>
-              </li>
-              <li class="infos-item">
-                <a href="">subscriptions</a>
-              </li>
-              <li class="infos-item">
-                <a href="">Talent Workshops</a>
-              </li>
-              <li class="infos-item">
-                <a href="">CPSC Certificates</a>
-              </li>
-              <li class="infos-item">
-                <a href="">Ratings</a>
-              </li>
-              <li class="infos-item">
-                <a href="">Shop Help</a>
-              </li>
-              <li class="infos-item">
-                <a href="">Contact Us</a>
-              </li>
+              
             </ul>
 
+            <!--menu 3-->
             <ul class="infos-list">
-              <h2>sites</h2>
-              <li class="infos-item">
-                <a href="">DC</a>
+
+              <h2>{{ menu3.title }}</h2>
+              <li v-for="link in menu3.links" key="i" class="infos-item">
+                <a href="">{{ link }}</a>
               </li>
-              <li class="infos-item">
-                <a href="">MAD Magazine</a>
-              </li>
-              <li class="infos-item">
-                <a href="">DC Kids</a>
-              </li>
-              <li class="infos-item">
-                <a href="">DC Universe</a>
-              </li>
-              <li class="infos-item">
-                <a href="">DC Power Visa</a>
-              </li>
+              
             </ul>
           </div>
 

@@ -100,6 +100,7 @@
 
   .menu-item:hover{
     color: #0282F9;
+    text-decoration: underline;
   }
 
   .active{

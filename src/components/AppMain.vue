@@ -97,12 +97,18 @@ export default {
 
     <!--HERO SECTION-->
     <section>
-      <div  class="hero" ></div>
+      <div  class="hero-immagine" ></div>
     </section>
 
     <!--CONTENT SECTION-->
     <section class="grid-sect">
-      <div class="container">
+      <div class="container container-griglia">
+      <div class="current-series">
+        <h3>
+          CURRENT SERIES
+        </h3> 
+      </div>
+      <div class="container cont-flex">
 
         <ul class="grid">
           <!-- <li v-for="(comic,i) in comics" :key="i" class="card">
@@ -115,6 +121,15 @@ export default {
           <!-- 3... stampare e ciclare il componente CArd------------------------------>
           <Card v-for="(comic,i) in comics" :key="i" :thumb="comic.thumb" :series="comic.series"  />
         </ul>
+        
+      </div>
+
+        <div class="container">
+          <div class="load-button">
+            <button class="custom-button">LOAD MORE</button>
+          </div>
+
+        </div>
 
       </div>
     </section>
@@ -123,6 +138,35 @@ export default {
 
 
 <style lang="scss" scoped>
+
+
+.cont-flex{
+  display: flex;
+  justify-content: center;
+}
+
+.load-button{
+  display: flex;
+  justify-content: center;
+}
+.custom-button{
+  background-color: #0282F9;
+  border-radius: 0px;
+}
+
+  .container-griglia{
+    position: relative;
+  }
+  .current-series{
+    padding: 10px;
+    background-color: #0282F9;
+    position: absolute;
+    top: -75px;
+    left: 10px;
+  } 
+    h3{
+      font-size: 28px;
+    }
 
   section{
     background-color: #1C1C1C;
@@ -137,10 +181,12 @@ export default {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     gap: 10px;
+    
   }
     
   .card{
     padding: 15px;
+    
   }
 
   .comic-image{
@@ -153,9 +199,12 @@ export default {
     font-size: 18px;
     text-transform: uppercase;
   }
-  .hero{
+  .hero-immagine{
     background-image: url('/images/jumbotron.jpg');
-    min-height: 400px;
+    min-height: 450px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
 

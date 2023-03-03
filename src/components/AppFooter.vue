@@ -1,8 +1,16 @@
 <script>
 
+import LinksCard from './LinksCard.vue';
+
 export default {
+
+  components:{
+    LinksCard
+  },
+
   data(){
     return {
+      
 
       menu1:{
         title: 'dc comics',
@@ -64,34 +72,18 @@ export default {
           <div class="row row-links">
 
             <!--menu 1-->
-            <ul class="infos-list">
-
-              <h2>{{ menu1.title }}</h2>
-              <li v-for="link in menu1.links" key="i" class="infos-item">
-                <a href="">{{ link }}</a>
-              </li>
-              
-            </ul>
+            <LinksCard :title="menu1.title" :links="menu1.links"  />
 
             <!--menu 2-->
-            <ul class="infos-list">
+            
+            <LinksCard :title="menu2.title" :links="menu2.links"  />
 
-              <h2>{{ menu2.title }}</h2>
-              <li v-for="link in menu2.links" key="i" class="infos-item">
-                <a href="">{{ link }}</a>
-              </li>
-              
-            </ul>
 
             <!--menu 3-->
-            <ul class="infos-list">
+            
+            <LinksCard :title="menu3.title" :links="menu3.links"  />
 
-              <h2>{{ menu3.title }}</h2>
-              <li v-for="link in menu3.links" key="i" class="infos-item">
-                <a href="">{{ link }}</a>
-              </li>
-              
-            </ul>
+
           </div>
 
           <div class="col-logo">
